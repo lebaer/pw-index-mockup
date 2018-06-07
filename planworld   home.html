@@ -10,20 +10,9 @@ Skin 1 (Basic) by Seth Fitzsimmons, Peter Kupfer, and Baker Franke
 <title>planworld :: home</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="https://neon.note.amherst.edu/planworld/favicon.ico">
 <link rel="stylesheet" type="text/css" media="all" title="default" href="planworld%20%20%20home_files/styles.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="Absolutely Essential" href="planworld%20%20%20home_files/styles_003.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="Aqueous Blue" href="planworld%20%20%20home_files/styles_005.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="Baby Blue" href="planworld%20%20%20home_files/styles_002.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="Hotel Pastis" href="planworld%20%20%20home_files/styles_011.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="Meadow" href="planworld%20%20%20home_files/styles_013.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="Metal" href="planworld%20%20%20home_files/styles_008.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="Minimalism" href="planworld%20%20%20home_files/styles_014.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="Night" href="planworld%20%20%20home_files/styles_004.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="PHP.net" href="planworld%20%20%20home_files/styles_007.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="Plum" href="planworld%20%20%20home_files/styles_006.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="Slate" href="planworld%20%20%20home_files/styles_009.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="Soylent Green" href="planworld%20%20%20home_files/styles_010.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="Standard" href="planworld%20%20%20home_files/styles.css">
-<link rel="alternative stylesheet" type="text/css" media="all" title="Terminal" href="planworld%20%20%20home_files/styles_012.css">
+
+<!-- snipped excess substitute stylesheets for purpose of minimizing unnecessary stuff in the mockup; curious to know who's using a non-default these days, and why? I'd love to have a day/night stylesheet, and add a few more accessible potential options, and all of them need to be updated anyway -->
+
 <script language="JavaScript" type="text/javascript">
 <!--
 function confirmDelete() {
@@ -32,6 +21,9 @@ function confirmDelete() {
 function confirmLogout() {
   return confirm("Are you sure you wish to leave planworld?");
 }
+
+// also, should send still be a separate window? most websites do an overlay rather than a window at this point. how long are some of these send histories taking to load or scroll through? are we losing send histories? should we paginate over a certain size? Assume I'll need to use some javascript ...
+
 function send (u) {
   window.open('/planworld/send.php/' + u + '#form', 'send', 'width=450,height=400,location=no,menubar=no,toolbar=no,status=no,scrollbars=yes');
   return false;
@@ -41,6 +33,9 @@ function send (u) {
 </head>
 
 <body cz-shortcut-listen="true">
+
+<!-- a whole host of these tables are going away in my client; to make things mobile-friendly, absolutely need to move to divs -->
+
 <table width="100%" cellspacing="0" cellpadding="0">
 <tbody><tr>
 <td class="border" valign="top">
@@ -189,7 +184,13 @@ that we can know who you read and be read in turn. For that matter,
 </tr>
 <tr>
 <td colspan="2" class="trailer" align="center">
-<span class="trailer">© Copyright 2001-2004 <a href="http://note.amherst.edu/" class="trailer" target="_blank" title="NOTE">NOTE</a><br>
+
+<!-- yeah, replace that with <?php echo date("Y"); ?> on-server --> 
+
+<span class="trailer">© Copyright <script>new Date().getFullYear()>2001&&document.write("-"+new Date().getFullYear());</script> <a href="http://note.amherst.edu/" class="trailer" target="_blank" title="NOTE">NOTE</a><br>
+
+<!-- how much of the below is still relevant? --> 
+
 <a href="http://note.amherst.edu/newathenian/" class="trailer" title="The New Athenian">The New Athenian</a> |
 <a href="http://directory.amherst.edu/" class="trailer" title="Online Directory">Directory</a> |
 <a href="https://exchange.amherst.edu/" class="trailer" title="Exchange">Exchange</a> |
@@ -202,5 +203,4 @@ that we can know who you read and be read in turn. For that matter,
 </tr>
 </tbody></table>
 
-
-<span style="border-radius: 3px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font: bold 11px/20px &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(255, 255, 255); background: rgb(189, 8, 28) url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==&quot;) no-repeat scroll 3px 50% / 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: medium none; -moz-osx-font-smoothing: grayscale;">Save</span><span style="width: 24px; height: 24px; background: rgba(0, 0, 0, 0.4) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxtYXNrIGlkPSJtIj48cmVjdCBmaWxsPSIjZmZmIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI2IiByeT0iNiIvPjxyZWN0IGZpbGw9IiMwMDAiIHg9IjUiIHk9IjUiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgcng9IjEiIHJ5PSIxIi8+PHJlY3QgZmlsbD0iIzAwMCIgeD0iMTAiIHk9IjAiIHdpZHRoPSI0IiBoZWlnaHQ9IjI0Ii8+PHJlY3QgZmlsbD0iIzAwMCIgeD0iMCIgeT0iMTAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0Ii8+PC9tYXNrPjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNmZmYiIG1hc2s9InVybCgjbSkiLz48L3N2Zz4=&quot;) no-repeat scroll 50% 50% / 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: medium none; border-radius: 12px;"></span></body></html>
+</body></html>
