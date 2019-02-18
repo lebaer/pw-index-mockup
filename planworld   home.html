@@ -1,207 +1,226 @@
-<!--?xml version="1.0" encoding="iso-8859-1"?-->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<!--
-
-$Id: outline.tpl,v 1.5.2.8 2003/11/11 15:55:29 seth Exp $
-Skin 1 (Basic) by Seth Fitzsimmons, Peter Kupfer, and Baker Franke
--->
-<title>planworld :: home</title>
-<link rel="icon" type="image/vnd.microsoft.icon" href="https://neon.note.amherst.edu/planworld/favicon.ico">
-<link rel="stylesheet" type="text/css" media="all" title="default" href="planworld%20%20%20home_files/styles.css">
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>planworld :: home</title>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="https://neon.note.amherst.edu/planworld/favicon.ico">
+	<link rel="stylesheet" type="text/css" media="all" title="default" href="planworld%20%20%20home_files/styles.css">
 
 <!-- snipped excess substitute stylesheets for purpose of minimizing unnecessary stuff in the mockup; curious to know who's using a non-default these days, and why? I'd love to have a day/night stylesheet, and add a few more accessible potential options, and all of them need to be updated anyway -->
 
-<script language="JavaScript" type="text/javascript">
-<!--
-function confirmDelete() {
-  return confirm("Are you sure you wish to clear your plan?");
-}
-function confirmLogout() {
-  return confirm("Are you sure you wish to leave planworld?");
-}
+<!-- is this the right place for delete, logout, send JavaScript? -->
+
+	<script language="JavaScript" type="text/javascript">
+	<!--
+		function confirmDelete() {
+		  return confirm("Are you sure you wish to clear your plan?");
+		}
+		function confirmLogout() {
+		  return confirm("Are you sure you wish to leave planworld?");
+		}
 
 // also, should send still be a separate window? most websites do an overlay rather than a window at this point. how long are some of these send histories taking to load or scroll through? are we losing send histories? should we paginate over a certain size? Assume I'll need to use some javascript ...
 
-function send (u) {
-  window.open('/planworld/send.php/' + u + '#form', 'send', 'width=450,height=400,location=no,menubar=no,toolbar=no,status=no,scrollbars=yes');
-  return false;
-}
-//-->
-</script>
+		function send (u) {
+		  window.open('/planworld/send.php/' + u + '#form', 'send', 'width=450,height=400,location=no,menubar=no,toolbar=no,status=no,scrollbars=yes');
+		  return false;
+		}
+	//-->
+	</script>
 </head>
 
-<body cz-shortcut-listen="true">
+<body>
 
 <!-- a whole host of these tables are going away in my client; to make things mobile-friendly, absolutely need to move to divs -->
 
-<table width="100%" cellspacing="0" cellpadding="0">
-<tbody><tr>
-<td class="border" valign="top">
-<!-- border table -->
-<table width="100%" cellspacing="1" cellpadding="0" border="0">
-<tbody><tr>
-<form method="get" action="/planworld/"></form>
-<td colspan="2" class="header" valign="top" height="50">
-<table width="100%" cellspacing="0" cellpadding="2">
-<tbody><tr>
-<td valign="bottom" align="left">
-<br>
-<a href="https://neon.note.amherst.edu/planworld/" title="planworld"><img src="planworld%20%20%20home_files/planworld.gif" alt="planworld" border="0"></a>
-</td>
-<td valign="bottom" align="right">
-<input class="inputTextBox" size="12" name="id" type="text">&nbsp;<input class="inputButton" value="Finger" type="submit">
-</td>
-</tr>
-</tbody></table>
-</td>
 
-</tr>
-<tr>
-<td colspan="2" class="navbar" height="20" align="left">
+
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tbody>
+		<tr>
+			<td class="border" valign="top">
+<!-- border table -->
+				<table width="100%" cellspacing="1" cellpadding="0" border="0">
+					<tbody>
+						<tr>
+							<form method="get" action="/planworld/"></form>
+							<td colspan="2" class="header" valign="top" height="50">
+								<table width="100%" cellspacing="0" cellpadding="2">
+									<tbody>
+										<tr>
+											<td valign="bottom" align="left">
+												<br>
+												<a href="https://neon.note.amherst.edu/planworld/" title="planworld"><img src="planworld%20%20%20home_files/planworld.gif" alt="planworld" border="0"></a>
+											</td>
+											<td valign="bottom" align="right">
+												<input class="inputTextBox" size="12" name="id" type="text">&nbsp;<input class="inputButton" value="Finger" type="submit">
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="navbar" height="20" align="left">
 <!-- nav bar -->
-<table width="100%" cellspacing="0" cellpadding="0">
-<tbody><tr>
-<td class="navbar" align="left">
-&nbsp;<a href="https://neon.note.amherst.edu/planworld/" class="navbar" title="Home">Home</a> |
-<a href="https://neon.note.amherst.edu/planworld/look.php" class="navbar" title="Look">Look</a> |
-<a href="https://neon.note.amherst.edu/planworld/?id=stats" class="navbar" title="Statistics">Stats</a> |
-<a href="https://neon.note.amherst.edu/planworld/?id=snitch" class="navbar" title="Snitch">Snitch</a> |
-<a href="https://neon.note.amherst.edu/planworld/?id=snoop" class="navbar" title="Snoop">Snoop</a> |
-<a href="https://neon.note.amherst.edu/planworld/?id=prefs" class="navbar" title="Preferences">Preferences</a> |
-<a href="https://neon.note.amherst.edu/planworld/?id=help" class="navbar" title="Frequently Asked Questions">FAQ</a> |
-<a href="https://neon.note.amherst.edu/planworld/?id=about" class="navbar" title="About Planworld">About</a> |
-<a href="https://neon.note.amherst.edu/planworld/?id=tutorial" class="navbar" title="How to Use Planworld">Tutorial</a>
-</td>
-<td class="navbar" align="right">
-lebaer00: <a href="https://neon.note.amherst.edu/planworld/?id=lebaer00" class="navbar" title="View your plan">View</a> |
-<a href="https://neon.note.amherst.edu/planworld/?id=edit_plan" class="navbar" title="Edit your plan">Edit</a> | 
-<a href="https://neon.note.amherst.edu/planworld/?id=archiving;u=lebaer00" class="navbar" title="View your archives">Archives</a> | 
-<a href="https://neon.note.amherst.edu/planworld/?id=del_plan" class="navbar" title="Clear your plan" onclick="return confirmDelete();">Delete</a> | 
-<a href="https://neon.note.amherst.edu/planworld/logout.php" title="Log out of planworld" onclick="return confirmLogout();">Logout</a>&nbsp;
-</td>
-</tr>
-</tbody></table>
+								<table width="100%" cellspacing="0" cellpadding="0">
+									<tbody>
+										<tr>
+											<td class="navbar" align="left">
+												&nbsp;<a href="https://neon.note.amherst.edu/planworld/" class="navbar" title="Home">Home</a> |
+												<a href="https://neon.note.amherst.edu/planworld/look.php" class="navbar" title="Look">Look</a> |
+												<a href="https://neon.note.amherst.edu/planworld/?id=stats" class="navbar" title="Statistics">Stats</a> |
+												<a href="https://neon.note.amherst.edu/planworld/?id=snitch" class="navbar" title="Snitch">Snitch</a> |
+												<a href="https://neon.note.amherst.edu/planworld/?id=snoop" class="navbar" title="Snoop">Snoop</a> |
+												<a href="https://neon.note.amherst.edu/planworld/?id=prefs" class="navbar" title="Preferences">Preferences</a> |
+												<a href="https://neon.note.amherst.edu/planworld/?id=help" class="navbar" title="Frequently Asked Questions">FAQ</a> |
+												<a href="https://neon.note.amherst.edu/planworld/?id=about" class="navbar" title="About Planworld">About</a> |
+												<a href="https://neon.note.amherst.edu/planworld/?id=tutorial" class="navbar" title="How to Use Planworld">Tutorial</a>
+											</td>
+											<td class="navbar" align="right">
+												lebaer00: <a href="https://neon.note.amherst.edu/planworld/?id=lebaer00" class="navbar" title="View your plan">View</a> |
+												<a href="https://neon.note.amherst.edu/planworld/?id=edit_plan" class="navbar" title="Edit your plan">Edit</a> | 
+												<a href="https://neon.note.amherst.edu/planworld/?id=archiving;u=lebaer00" class="navbar" title="View your archives">Archives</a> | 
+												<a href="https://neon.note.amherst.edu/planworld/?id=del_plan" class="navbar" title="Clear your plan" onclick="return confirmDelete();">Delete</a> | 
+												<a href="https://neon.note.amherst.edu/planworld/logout.php" title="Log out of planworld" onclick="return confirmLogout();">Logout</a>&nbsp;
+											</td>
+										</tr>
+									</tbody>
+								</table>
 <!-- / nav bar -->
-</td>
-</tr>
-<tr>
-<td class="planwatch" width="160" valign="top" align="left">
-<img src="planworld%20%20%20home_files/ghost.gif" alt="" width="160" height="1"><br>
+							</td>
+						</tr>
+						<tr>
+							<td class="planwatch" width="160" valign="top" align="left">
+								<img src="planworld%20%20%20home_files/ghost.gif" alt="" width="160" height="1"><br>
 <!-- planwatch -->
-<table width="100%" cellspacing="0" cellpadding="5">
-<tbody><tr>
-<td class="planwatch">
-<table width="100%" cellspacing="0" cellpadding="0">
-<tbody><tr>
-<td align="left">
-<a href="https://neon.note.amherst.edu/planworld/?id=edit_pw" title="Edit your planwatch" class="subtitle">planwatch</a>
-</td>
-<td valign="top" align="right">
-<a href="https://neon.note.amherst.edu/planworld/?id=edit_pw" title="Edit your planwatch"><span class="small">EDIT</span></a>
-</td>
-</tr>
-</tbody></table>
-(505 people, 0 new)
-<hr size="1" noshade="noshade">
-</td>
-</tr>
-<tr>
-<td class="planwatch">
-<strong><u>Send</u></strong><br>
-<a href="#" onclick="return send('aplazarus03');" title="pick up message(s)"><img src="planworld%20%20%20home_files/mail.gif" alt="message" border="0"></a> <a class="planwatch" href="https://neon.note.amherst.edu/planworld/?id=aplazarus03" title="Finger aplazarus03">aplazarus03</a> (5/29/18)<br>
-<br>
-<strong><u>People</u></strong><br>
-<a class="planwatch" href="https://neon.note.amherst.edu/planworld/?id=jlodom00" title="Finger jlodom00">jlodom00</a> (10:07am)<br>
-<a class="planwatch" href="https://neon.note.amherst.edu/planworld/?id=mjweber02" title="Finger mjweber02">mjweber02</a> (9:36am)<br>
-<a class="planwatch" href="https://neon.note.amherst.edu/planworld/?id=lebaer00" title="Finger lebaer00">lebaer00</a> (9:26am)<br>
-<br>
-</td>
-</tr>
-</tbody></table>
+								<table width="100%" cellspacing="0" cellpadding="5">
+									<tbody>
+										<tr>
+											<td class="planwatch">
+												<table width="100%" cellspacing="0" cellpadding="0">
+													<tbody>
+														<tr>
+															<td align="left">
+																<a href="https://neon.note.amherst.edu/planworld/?id=edit_pw" title="Edit your planwatch" class="subtitle">planwatch</a>
+															</td>
+															<td valign="top" align="right">
+																<a href="https://neon.note.amherst.edu/planworld/?id=edit_pw" title="Edit your planwatch"><span class="small">EDIT</span></a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												(505 people, 0 new)
+												<hr size="1" noshade="noshade">
+											</td>
+										</tr>
+										<tr>
+											<td class="planwatch">
+												<strong><u>Send</u></strong><br>
+												<a href="#" onclick="return send('aplazarus03');" title="pick up message(s)"><img src="planworld%20%20%20home_files/mail.gif" alt="message" border="0"></a> <a class="planwatch" href="https://neon.note.amherst.edu/planworld/?id=aplazarus03" title="Finger aplazarus03">aplazarus03</a> (5/29/18)<br>
+												<br>
+												<strong><u>People</u></strong><br>
+												<a class="planwatch" href="https://neon.note.amherst.edu/planworld/?id=jlodom00" title="Finger jlodom00">jlodom00</a> (10:07am)<br>
+												<a class="planwatch" href="https://neon.note.amherst.edu/planworld/?id=mjweber02" title="Finger mjweber02">mjweber02</a> (9:36am)<br>
+												<a class="planwatch" href="https://neon.note.amherst.edu/planworld/?id=lebaer00" title="Finger lebaer00">lebaer00</a> (9:26am)<br>
+												<br>
+											</td>
+										</tr>
+									</tbody>
+								</table>
 <!-- / planwatch -->
-</td>
-<td class="content" width="100%" valign="top">
-<table width="100%" cellspacing="0" cellpadding="5">
-<tbody><tr>
-<td valign="top">
+							</td>
+
+<!-- ARTICLE STARTS HERE? -->
+
+							<td class="content" width="100%" valign="top">
+								<table width="100%" cellspacing="0" cellpadding="5">
+									<tbody>
+										<tr>
+											<td valign="top">
 <!-- BEGIN CONTENT -->
-<table width="100%" cellspacing="0" cellpadding="0">
-<tbody><tr>
-<td align="left">
-<span class="subtitle">Home</span>
-</td>
-<td align="right">
-Friday, June 1st, 2018  10:12am</td>
-</tr>
-</tbody></table>
-<p><strong>Cookie:</strong><br>
-Student's snack--cramberries
-<br>
--- Raymond D. Love<br>
-</p>
-<p>To submit cookies, <a href="https://neon.note.amherst.edu/planworld/?id=stuff;s=cookie;a=add" title="Submit a cookie">click here</a>.</p>
-<hr size="1" noshade="noshade">
-<p><strong>Latest:</strong><br>
+												<table width="100%" cellspacing="0" cellpadding="0">
+													<tbody>
+														<tr>
+															<td align="left">
+																<span class="subtitle">Home</span>
+															</td>
+															<td align="right">
+																Friday, June 1st, 2018  10:12am
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<p>
+													<strong>Cookie:</strong><br>
+													Student's snack--cramberries
+													<br>
+													-- Raymond D. Love<br>
+												</p>
+												<p>To submit cookies, <a href="https://neon.note.amherst.edu/planworld/?id=stuff;s=cookie;a=add" title="Submit a cookie">click here</a>.</p>
+												<hr size="1" noshade="noshade">
+												<p><strong>Latest:</strong><br>
 
 <!-- Looking at /lib/User.php; presuming I'll need to call getLastUpdates() [from Planworld.php? Seems more likely than getLastUpdate() from User.php] for the "most recently updated" set of names, and getNewUsers() [again Planworld.php] for the "most recently joined" set of names. -->
 
-<p>Planworld strives to be an open and inclusive community, so feel free to follow people you don't know as well! The last five people who updated are: 
-<a href="/planworld/?id=jlodom00">jlodom00</a>, <a href="/planworld/?id=mjweber02">mjweber02</a>, <a href="/planworld/?id=lebaer00">lebaer00</a>, <a href="npdoty06">npdoty06</a>, [and] <a href="jdtang05">jdtang05</a>. The most recent people to join Planworld are: <a href="/planworld/?id=ehgalloway73">ehgalloway73</a>, <a href="/planworld/?id=azolot11">azolot11</a>, <a href="/planworld/?id=sjones19">sjones19</a>, <a href="/planworld/?id=gsmithrosario17">gsmithrosario17</a>, [and] <a href="/planworld/?id=pyan18">pyan18</a>.
+												<p>Planworld strives to be an open and inclusive community, so feel free to follow people you don't know as well! The last five people who updated are: <a href="/planworld/?id=jlodom00">jlodom00</a>, <a href="/planworld/?id=mjweber02">mjweber02</a>, <a href="/planworld/?id=lebaer00">lebaer00</a>, <a href="npdoty06">npdoty06</a>, [and] <a href="jdtang05">jdtang05</a>.</p>
 
-<!-- The [and]s would be nice from a grammatical standpoint but not necessary in a first draft; let's get the appropriate number of names out of the array before we get schmancy for display here -->
+<!-- The [and]s would be nice from a grammatical standpoint but not necessary in a first draft; let's get the appropriate number of names out of the array before we do fancy display processing. Also removed "last five new users" until I can figure out "last five new users who've actually written plans;" this should probably not be implemented until we regularly have a quorum of new users who have updated their plan in the last 24 or so hours -->
 
-<p><strong>System Updates:</strong><br>
-</p><p><strong>5/21/17, 4:38pm</strong><br>
- </p><p>Hello Reuniongoers! If you came here because you see the 
-Planworld session on the Reunion program, then here's a few starting 
-points:</p><p>
-</p><ul>
-<li>To use Planworld you may find the <a href="https://neon.note.amherst.edu/planworld/?id=tutorial">tutorial</a> and the <a href="https://neon.note.amherst.edu/planworld/?id=help">FAQ</a> of interest.</li>
-<li>If you want to know the history, that is on the <a href="https://neon.note.amherst.edu/planworld/?id=about">about</a> page.</li>
-<li>In order to change the way Planworld looks (among other things), change your <a href="https://neon.note.amherst.edu/planworld/?id=prefs">preferences</a>.</li>
-<li>In particular, please register for Snitch through preferences so 
-that we can know who you read and be read in turn. For that matter,
- you should write a plan (via the <a href="https://neon.note.amherst.edu/planworld/?id=edit">edit</a> link) so that we can say hi.</li>
-<li>If you need to start reading someone's plan, well, <a href="https://neon.note.amherst.edu/planworld/?id=jlodom00">jlodom00</a> is giving the session.</li>
-<li>Please forgive the 2001-era HTML. There's a roadmap ...</li>
-<li>If you want to see who is using planworld right now you can finger the <a href="https://neon.note.amherst.edu/planworld/?id=who">who</a> account</li>
-<li>If you want to see who is new here (like you!) you can finger the <a href="https://neon.note.amherst.edu/planworld/?id=new">new</a> account</li>
-<li>And if you would like to see a list of every plan on the Amherst system then you need to finger <a href="https://neon.note.amherst.edu/planworld/?id=whois">whois</a>.</li>
-<li>Finally, you should come to the Apocalypse Party at 7pm on Saturday.
- It is in the Reunion program. You'll love it. The people are great.</li>
-</ul>
-<p></p><p></p>
-<p><strong>11/15/15, 9:52pm</strong><br>
- If you are interested in working on the Planworld codebase, finger <a href="https://neon.note.amherst.edu/planworld/?id=jlodom00">jlodom00</a> .</p>
-<p></p>
+												<p><strong>System Updates:</strong><br>
+												</p>
+												<p><strong>5/21/17, 4:38pm</strong><br>
+ 												</p>
+												<p>Hello Reuniongoers! If you came here because you see the Planworld session on the Reunion program, then here's a few starting points:</p><p>
+												</p>
+												<ul>
+													<li>To use Planworld you may find the <a href="https://neon.note.amherst.edu/planworld/?id=tutorial">tutorial</a> and the <a href="https://neon.note.amherst.edu/planworld/?id=help">FAQ</a> of interest.</li>
+													<li>If you want to know the history, that is on the <a href="https://neon.note.amherst.edu/planworld/?id=about">about</a> page.</li>
+													<li>In order to change the way Planworld looks (among other things), change your <a href="https://neon.note.amherst.edu/planworld/?id=prefs">preferences</a>.</li>
+													<li>In particular, please register for Snitch through preferences so that we can know who you read and be read in turn. For that matter, you should write a plan (via the <a href="https://neon.note.amherst.edu/planworld/?id=edit">edit</a> link) so that we can say hi.</li>
+													<li>If you need to start reading someone's plan, well, <a href="https://neon.note.amherst.edu/planworld/?id=jlodom00">jlodom00</a> is giving the session.</li>
+													<li>Please forgive the 2001-era HTML. There's a roadmap ...</li>
+													<li>If you want to see who is using planworld right now you can finger the <a href="https://neon.note.amherst.edu/planworld/?id=who">who</a> account</li>
+													<li>If you want to see who is new here (like you!) you can finger the <a href="https://neon.note.amherst.edu/planworld/?id=new">new</a> account</li>
+													<li>And if you would like to see a list of every plan on the Amherst system then you need to finger <a href="https://neon.note.amherst.edu/planworld/?id=whois">whois</a>.</li>
+													<li>Finally, you should come to the Apocalypse Party at 7pm on Saturday. It is in the Reunion program. You'll love it. The people are great.</li>
+												</ul>
+												<p></p><p></p>
+												<p><strong>11/15/15, 9:52pm</strong><br>
+ 												If you are interested in working on the Planworld codebase, finger <a href="https://neon.note.amherst.edu/planworld/?id=jlodom00">jlodom00</a> .</p>
+												<p></p>
 <!-- END CONTENT -->
-</td>
-</tr>
-</tbody></table>
-</td>
-</tr>
-<tr>
-<td colspan="2" class="trailer" align="center">
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="trailer" align="center">
 
 <!-- yeah, replace that with <?php echo date("Y"); ?> on-server --> 
 
-<span class="trailer">© Copyright 2001-<script>document.write(new Date().getFullYear());</script> <a href="http://note.amherst.edu/" class="trailer" target="_blank" title="NOTE">NOTE</a><br>
+								<span class="trailer">© Copyright 2001-<script>document.write(new Date().getFullYear());</script> 
+									<a href="http://note.amherst.edu/" class="trailer" target="_blank" title="NOTE">NOTE</a><br>
 
 <!-- Privacy policy currently links to Amherst main; we should probably have our own that says "Amherst has final jurisdiction, but here's how we operate" --> 
 
-<a href="http://directory.amherst.edu/" class="trailer" title="Online Directory">Directory</a> |
-<a href="https://exchange.amherst.edu/" class="trailer" title="Exchange">Exchange</a> |
-<a href="https://www.amherst.edu/academiclife/dean_faculty/fph/policies/freedomofexpression">Freedom of Expression and Dissent</a> | 
-<a href="https://www.amherst.edu/academiclife/dean_faculty/fph/policies/respect">Respect for Persons</a> |
-<a href="https://www.amherst.edu/about/privacy/">Privacy</a> | 
-<a href="mailto:planworld@amherst.edu" class="trailer" title="Email the planworld folks!">Contact Us</a></span>
-</td>
-</tr>
-</tbody></table>
-</td>
-</tr>
-</tbody></table>
+									<a href="http://directory.amherst.edu/" class="trailer" title="Online Directory">Directory</a> |
+									<a href="https://exchange.amherst.edu/" class="trailer" title="Exchange">Exchange</a> |
+									<a href="https://www.amherst.edu/academiclife/dean_faculty/fph/policies/freedomofexpression">Freedom of Expression and Dissent</a> | 
+									<a href="https://www.amherst.edu/academiclife/dean_faculty/fph/policies/respect">Respect for Persons</a> |
+									<a href="https://www.amherst.edu/about/privacy/">Privacy</a> | 
+									<a href="mailto:planworld@amherst.edu" class="trailer" title="Email the planworld folks!">Contact Us</a>
+								</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
 
-</body></html>
+</body>
+</html>

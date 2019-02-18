@@ -36,31 +36,31 @@
 <!-- need to tweak alignment but that'll be done in CSS -->
 
 <header>
-	<!-- not sure this is necessary? <form method="get" action="/planworld/"></form> -->
+	<!-- not sure this is necessary? or possibly displaced? why is this so separate from the finger button? which should be a button, right? <form method="get" action="/planworld/"></form> -->
 	<a href="https://neon.note.amherst.edu/planworld/" title="planworld"><img src="planworld%20%20%20home_files/planworld.gif" alt="planworld" border="0"></a>
-	<input class="inputTextBox" size="12" name="id" type="text">&nbsp;<input class="inputButton" value="Finger" type="submit">
-</header>
+	<br><input class="inputTextBox" size="12" name="id" type="text">&nbsp;<input class="inputButton" value="Finger" type="submit">
 
 <!-- again, more alignment tweaking; should split at $username -->
 
-<nav> <!-- class=? -->
-	<a href="https://neon.note.amherst.edu/planworld/" class="navbar" title="Home">Home</a> |
-	<a href="https://neon.note.amherst.edu/planworld/look.php" class="navbar" title="Look">Look</a> |
-	<a href="https://neon.note.amherst.edu/planworld/?id=stats" class="navbar" title="Statistics">Stats</a> |
-	<a href="https://neon.note.amherst.edu/planworld/?id=snitch" class="navbar" title="Snitch">Snitch</a> |
-	<a href="https://neon.note.amherst.edu/planworld/?id=snoop" class="navbar" title="Snoop">Snoop</a> |
-	<a href="https://neon.note.amherst.edu/planworld/?id=prefs" class="navbar" title="Preferences">Preferences</a> |
-	<a href="https://neon.note.amherst.edu/planworld/?id=help" class="navbar" title="Frequently Asked Questions">FAQ</a> |
-	<a href="https://neon.note.amherst.edu/planworld/?id=about" class="navbar" title="About Planworld">About</a> |
-	<a href="https://neon.note.amherst.edu/planworld/?id=tutorial" class="navbar" title="How to Use Planworld">Tutorial</a>
-	lebaer00: <a href="https://neon.note.amherst.edu/planworld/?id=lebaer00" class="navbar" title="View your plan">View</a> |
-	<a href="https://neon.note.amherst.edu/planworld/?id=edit_plan" class="navbar" title="Edit your plan">Edit</a> | 
-	<a href="https://neon.note.amherst.edu/planworld/?id=archiving;u=lebaer00" class="navbar" title="View your archives">Archives</a> | 
-	<a href="https://neon.note.amherst.edu/planworld/?id=del_plan" class="navbar" title="Clear your plan" onclick="return confirmDelete();">Delete</a> | 
-	<a href="https://neon.note.amherst.edu/planworld/logout.php" title="Log out of planworld" onclick="return confirmLogout();">Logout</a>&nbsp;
-</nav>
+	<nav id="navbar">
+		<a href="https://neon.note.amherst.edu/planworld/" class="navbar" title="Home">Home</a> |
+		<a href="https://neon.note.amherst.edu/planworld/look.php" class="navbar" title="Look">Look</a> |
+		<a href="https://neon.note.amherst.edu/planworld/?id=stats" class="navbar" title="Statistics">Stats</a> |
+		<a href="https://neon.note.amherst.edu/planworld/?id=snitch" class="navbar" title="Snitch">Snitch</a> |
+		<a href="https://neon.note.amherst.edu/planworld/?id=snoop" class="navbar" title="Snoop">Snoop</a> |
+		<a href="https://neon.note.amherst.edu/planworld/?id=prefs" class="navbar" title="Preferences">Preferences</a> |
+		<a href="https://neon.note.amherst.edu/planworld/?id=help" class="navbar" title="Frequently Asked Questions">FAQ</a> |
+		<a href="https://neon.note.amherst.edu/planworld/?id=about" class="navbar" title="About Planworld">About</a> |
+		<a href="https://neon.note.amherst.edu/planworld/?id=tutorial" class="navbar" title="How to Use Planworld">Tutorial</a>
+		<br>lebaer00: <a href="https://neon.note.amherst.edu/planworld/?id=lebaer00" class="navbar" title="View your plan">View</a> |
+		<a href="https://neon.note.amherst.edu/planworld/?id=edit_plan" class="navbar" title="Edit your plan">Edit</a> | 
+		<a href="https://neon.note.amherst.edu/planworld/?id=archiving;u=lebaer00" class="navbar" title="View your archives">Archives</a> | 
+		<a href="https://neon.note.amherst.edu/planworld/?id=del_plan" class="navbar" title="Clear your plan" onclick="return confirmDelete();">Delete</a> | 
+		<a href="https://neon.note.amherst.edu/planworld/logout.php" title="Log out of planworld" onclick="return confirmLogout();">Logout</a>&nbsp;
+	</nav>
+</header>
 
-<nav> <!-- class="planwatch"? -->
+<nav id="planwatch">
 	<a href="https://neon.note.amherst.edu/planworld/?id=edit_pw" title="Edit your planwatch" class="subtitle">planwatch</a> | 
 	<a href="https://neon.note.amherst.edu/planworld/?id=edit_pw" title="Edit your planwatch">EDIT</a> <!-- wait, do both really have to link separately to the same place? -->
 	<br>(505 people, 0 new)
@@ -75,7 +75,7 @@
 	<br>
 </nav>
 
-<main>
+<article>
 	<h1>Home</h1>
 	<p>$DATETIME
 		<br>$COOKIE
@@ -92,7 +92,7 @@
 
 	<h2>System Updates</h2>
 
-	<p>5/21/17, 4:38pm</p> <!-- h3 or apply class -->
+	<h3>5/21/17, 4:38pm</h3> <!-- h3 or apply class, make semantic decision on slightly more sleep thanks -->
 	<p>Hello Reuniongoers! If you came here because you see the Planworld session on the Reunion program, then here's a few starting points:</p>
 	<ul>
 		<li>To use Planworld you may find the <a href="https://neon.note.amherst.edu/planworld/?id=tutorial">tutorial</a> and the <a href="https://neon.note.amherst.edu/planworld/?id=help">FAQ</a> of interest.</li>
@@ -107,10 +107,10 @@
 		<li>Finally, you should come to the Apocalypse Party at 7pm on Saturday. It is in the Reunion program. You'll love it. The people are great.</li>
 	</ul>
 	
-	<p>11/15/15, 9:52pm</p> <!-- again, h3 or apply class -->
+	<h3>11/15/15, 9:52pm</h3> <!-- again, h3 or apply class -->
  	<p>If you are interested in working on the Planworld codebase, finger <a href="https://neon.note.amherst.edu/planworld/?id=jlodom00">jlodom00</a>.</p>
 
-</main>
+</article>
 
 <footer>
 	<!-- Privacy policy currently links to Amherst main; we should probably have our own that says "Amherst has final jurisdiction, but here's how we operate" --> 
